@@ -98,7 +98,7 @@ export const links = [
   {
     text: 'Killingworth',
     img: FaArrowRightLong,
-    route: '/location',
+    route: '/killingworth',
   },
   {
     text: 'Brunswick',
