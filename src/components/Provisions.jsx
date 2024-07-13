@@ -1,45 +1,69 @@
 import React from 'react'
-import Button from './Button'
 import frame from '../assets/images/provisions/frame.png'
 import frame1 from '../assets/images/provisions/frame1.png'
 import frame2 from '../assets/images/provisions/frame2.png'
 import group from '../assets/images/provisions/group.png'
-import about from '../assets/images/provisions/About.png'
+import { FaArrowRightLong } from 'react-icons/fa6'
 
-const Provisions = () => {
+const Provisions = ({ text, main }) => {
   return (
     <main className="bg-white py-8 px-4 md:px-16 items-center">
-      <p className="font-[400] font-inter text-[18px] md:text-[24px] leading-[28px] md:leading-[32px] text-main pb-2">
-        Why store with us?
-      </p>
-      <div className="flex flex-col md:flex-row justify-between">
-        <h3 className="font-[700] font-helvetica text-[24px] md:text-[40px] leading-[32px] md:leading-[56px] text-main">
-          We’re safe, easy & affordable
-        </h3>
-        <Button
-          bg="brown"
-          text="Get a quote"
-          width="156px"
-          height="40px"
-          color="main"
-          gap="16px"
-        />
-      </div>
+      <div className="max-w-7xl mx-auto">
+        <p className="font-[400] font-inter text-[18px] lg:text-[24px] leading-[28px] lg:leading-[32px] text-main pb-2">
+          {text}
+        </p>
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <h3 className="font-[700] font-helvetica text-[24px] md:text-[40px] leading-[32px] md:leading-[56px] text-main">
+            {main}
+          </h3>
+          <div className="pt-4">
+            <button
+              className="flex items-center rounded-md cursor-pointer py-2 px-4 border custom-button-border font-helvetica font-[700] text-main gap-4"
+              style={{
+                backgroundImage:
+                  'linear-gradient(90deg, #FFE0B2 0%, #FFCC80 100%)',
+                backgroundSize: '100%',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center',
+              }}
+            >
+              Get a quote
+              <FaArrowRightLong />
+            </button>
+          </div>
+        </div>
 
-      <div className="flex flex-col md:flex-row justify-center gap-y-[20px] gap-x-[20px] pt-12">
-        <div className="md:w-[360px] md:h-[469px] w-[340px] h-[465px]">
-          <img src={frame} alt="" />
+        <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 pt-12">
+          <div className="w-full md:w-1/3">
+            <img
+              src={frame}
+              alt="frame"
+              className="md:w-full md:h-auto w-full h-auto"
+            />
+          </div>
+          <div className="w-full md:w-1/3">
+            <img
+              src={frame1}
+              alt="frame1"
+              className="md:w-full md:h-auto w-full h-auto"
+            />
+          </div>
+          <div className="w-full md:w-1/3">
+            <img
+              src={frame2}
+              alt="frame2"
+              className="md:w-full md:h-auto w-full h-auto"
+            />
+          </div>
         </div>
-        <div className="md:w-[360px] md:h-[469px] w-[340px] h-[465px]">
-          <img src={frame1} alt="" />
-        </div>
-        <div className="md:w-[360px] md:h-[469px] w-[340px] h-[465px]">
-          <img src={frame2} alt="" />
-        </div>
-      </div>
 
-      <div className="md:w-[1140px] md:h-[348px] w-[338px] h-[420px] py-10">
-        <img src={group} alt="group image" />
+        <div className="flex items-center justify-center">
+          <img
+            src={group}
+            alt="group"
+            className="md:max-w-full md:h-auto w-full h-auto py-10"
+          />
+        </div>
       </div>
     </main>
   )

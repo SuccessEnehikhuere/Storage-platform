@@ -1,28 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo from '../assets/images/navbar/Logo.svg'
 import { NavbarLinks } from '../utils'
 import Button from './Button'
 import { GiHamburgerMenu } from 'react-icons/gi'
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen)
+  }
+
+  const closeMenu = () => {
+    setMenuOpen(false)
+  }
+
   return (
-    <nav className="bg-custom-gradient h-[88px] py-6 px-[70px] flex items-center mx-auto">
-      {/* <div className="flex items-center justify-center gap-x-[271px]">
-        <div className="w-[124.76px] md:w-[124px] h-8">
-          <img src={logo} />
-        </div> */}
-        {/*MEDIU TO LARGE SCREEN*/}
-        {/* <div className="hidden md:flex text-[16px] gap-x-4 text-nowrap cursor-pointer">
-          {NavbarLinks.map((link, index) => {
-            return (
-              <a
-                key={index}
-                className="font-inter font-[700] text-white leading-5 rounded-md py-2 px-3 hover:border custom-hover-border"
-              >
-                {link}
-              </a>
-            )
-          })}
+    <nav className="bg-custom-gradient px-8 w-full mx-auto">
+      <div className="flex items-center justify-between py-8">
+        <div>
+          <img src={logo} alt="logo" />
+        </div>
+
+        {/* Medium to large screens */}
+        <div className="hidden lg:flex gap-2">
+          {NavbarLinks.map((link, index) => (
+            <a
+              key={index}
+              className="font-inter font-[700] text-white leading-5 rounded-md py-2 px-3 hover:border custom-hover-border"
+            >
+              {link}
+            </a>
+          ))}
 
           <Button
             bg="white"
@@ -32,11 +41,38 @@ const Navbar = () => {
             color="main"
             gap="12px"
           />
-        </div> */}
+        </div>
 
-        {/*SMALL SCREEN*/}
-        {/* <GiHamburgerMenu className='flex md:hidden'/>
-      </div> */}
+        {/* Hamburger menu for small screens */}
+        <GiHamburgerMenu
+          className="lg:hidden w-8 h-8 text-white cursor-pointer"
+          onClick={toggleMenu}
+        />
+      </div>
+
+      {/* Mobile menu */}
+      {menuOpen && (
+        <div className="lg:hidden flex flex-col  mt-4">
+          {NavbarLinks.map((link, index) => (
+            <a
+              key={index}
+              className="font-inter font-[700] text-white leading-5 rounded-md py-2 px-3 hover:border custom-hover-border"
+              onClick={closeMenu}
+            >
+              {link}
+            </a>
+          ))}
+          <Button
+            bg="#FFCC80"
+            text="Get a quote"
+            width="89px"
+            height="24px"
+            color="main"
+            gap="12px"
+            onClick={closeMenu}
+          />
+        </div>
+      )}
     </nav>
   )
 }

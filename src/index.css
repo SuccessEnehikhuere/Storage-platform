@@ -15,3 +15,16 @@
   border-color: rgba(40, 85, 129, 0.15);
 }
 
+.custom-border {
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.orange {
+  background-image: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 100%, #FFF5E5 100%);
+}
+
+.button {
+  background-image: linear-gradient(to right, #FFE0B2, #FFCC80);
+}

@@ -1,19 +1,37 @@
 import React from 'react'
-import { Navbar, Hero, LocationFinder, Reviews, Storage, Provisions, About, Rates, Footer, End } from '../components'
+import {
+  CustomHero,
+  Navbar,
+  LocationFinder,
+  Reviews,
+  Storage,
+  Provisions,
+  About,
+  Rates,
+  Footer,
+  End,
+} from '../components'
 
 const Home = () => {
   return (
     <>
       <Navbar />
-      <Hero />
-      <LocationFinder/>
-      <Reviews/>
+      <CustomHero
+        text="Self Storage 
+"
+        mini=" Newcastle & the North East"
+      />
+      <LocationFinder />
+      <Reviews />
       <Storage />
-      <Provisions />
-      <About/>
-      <Rates/>
-      <Footer/>
-      <End/>
+      <Provisions
+        text="Why store with us?"
+        main="We’re safe, easy & affordable"
+      />
+      <About />
+      <Rates text=" Self storage rated " />
+      <Footer />
+      <End />
     </>
   )
 }

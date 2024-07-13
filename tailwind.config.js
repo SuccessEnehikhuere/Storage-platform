@@ -8,15 +8,15 @@ module.exports = {
         'orange-gradient':
           'linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 100%, #FFF5E5 100%)',
       },
-
       colors: {
         main: '#285581',
         cream: '#FAF8F5',
         blue: '#197FE5',
         brown: '#FFB84D',
         darkBlue: '#2A4D6F',
+        light: '#F4F6F9',
+        gold: '#FFB84D',
       },
-
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
         helvetica: ['Helvetica', 'Arial', 'sans-serif'],

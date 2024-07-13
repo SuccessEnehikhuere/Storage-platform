@@ -1,21 +1,21 @@
 import React from 'react'
 import pic from '../assets/images/reviews/about us.png'
+import line from '../assets/images/reviews/Vector 216.svg'
 import { reviews } from '../utils'
 
 
 const Reviews = () => {
   return (
-    <main className="flex items-center pt-80 px-4 md:px-16 bg-cream">
-      <div>
-        <div className="flex flex-col md:flex-row pt-8 gap-x-6 gap-y-6 items-center px-6 ">
+    <main className="flex items-center pt-[420px] px-4 md:px-16 bg-cream">
+      <div className='flex flex-col items-center justify-center'>
+        <div className="flex flex-col md:flex-row pt-8 gap-6 items-center px-6 ">
           <div>
-            <h2 className="font-inter font-[400] text-[24px] md:text-[40px] leading-[32px] md:leading-[56px] text-main">
-              We’re a <span className="font-[700]">family-run</span> North East
-              self storage company that’s rated 5 stars by our loyal customers
-
-              {/* <div className="w-[106.28px] h-[3.53px] absolute border-[3px] bottom-[-310px]  left-[120px]"></div> */}
+            <h2 className="font-inter font-[400] text-[24px] md:text-[40px] leading-[32px] md:leading-[56px] text-main tracking-tight">
+              We’re a <span className="font-[700]">family-run
+                <img src={line} /></span> North East
+              self storage company <br/>that’s rated 5 stars by our loyal customers
             </h2>
-            <p className="pt-[24px] leading-[32px] text-[20px] md:text-[24px] font-[100]">
+            <p className="pt-[24px] leading-[32px] text-[20px] md:text-[24px] font-[100] ">
               * Without the High Prices of National Chains
             </p>
           </div>
@@ -36,7 +36,7 @@ const Reviews = () => {
                 <img
                   src={review.img}
                   alt={review.name}
-                  className="hidden md:flex w-[20px] h-[20px] pl-[12px]  "
+                  className="hidden md:flex w-[20px] h-[20px] pl-[8px]  "
                 />
                 <img
                   src={review.img}
@@ -46,17 +46,17 @@ const Reviews = () => {
                 <img
                   src={review.img}
                   alt={review.name}
-                  className="hidden md:flex w-[20px] h-[20px] pl-[12px]  "
+                  className="hidden md:flex w-[20px] h-[20px] pl-[8px]  "
                 />
                 <img
                   src={review.img}
                   alt={review.name}
-                  className="hidden md:flex w-[20px] h-[20px] pl-[12px]  "
+                  className="hidden md:flex w-[20px] h-[20px] pl-[8px]  "
                 />
                 <img
                   src={review.img}
                   alt={review.name}
-                  className="hidden md:flex w-[20px] h-[20px] pl-[12px]  "
+                  className="hidden md:flex w-[20px] h-[20px] pl-[8px]  "
                 />
               </div>
               <p className="font-[400] font-inter text-[13px] leading-[20px] ">

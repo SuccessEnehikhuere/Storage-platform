@@ -1,15 +1,29 @@
 import { IoSearch } from 'react-icons/io5'
 import { links } from '../utils'
+import line from '../assets/images/hero/line.svg'
 
 const LocationFinder = () => {
   return (
     <main className="bg-cream px-4 md:px-16">
-      <div className="bg-white rounded-lg border custom-button-border absolute top-[450px] md:top-[720px] w-full max-w-[400px] md:max-w-[80%] left-1/2 transform -translate-x-1/2">
+      <div className="bg-white rounded-lg lg:rounded-b-lg border custom-button-border absolute top-[350px] md:top-[768px] w-full max-w-[400px] md:max-w-[80%] left-1/2 transform -translate-x-1/2">
         <div className="p-4">
-          <h2 className="text-center">Search our locations</h2>
+          <div className="flex items-center justify-center gap-2 py-4">
+            <img
+              src={line}
+              className="w-[40.5px] h-[1px] md:w-[311px] md:h-[1px] border custom-button-border"
+            />
+            <h2 className="text-center font-helvetica font-[700]  text-main text-[18px] md:text-[24px] leading-[28px] md:leading-[32px]">
+              Search our locations
+            </h2>
+            <img
+              src={line}
+              className="w-[40.5px] h-[1px] md:w-[311px] md:h-[1px] border custom-button-border"
+            />
+          </div>
+
           <div className="flex items-center justify-center gap-x-4 px-8 ">
             <input
-              className=" py-3 w-full border rounded-md"
+              className=" py-3 w-full border rounded-md pl-2"
               placeholder="Search locations by postcode"
             />
             <button className="bg-main py-3 px-8 rounded-md flex gap-x-4 items-center">
@@ -20,7 +34,19 @@ const LocationFinder = () => {
             </button>
           </div>
 
-          <h3 className="mt-4 text-center">Or find by town</h3>
+          <div className="flex items-center justify-center gap-2 py-4">
+            <img
+              src={line}
+              className="w-[40.5px] h-[1px] md:w-[311px] md:h-[1px] border custom-button-border"
+            />
+            <h2 className="text-center font-helvetica font-[700]  text-main text-[16x] leading-[24px] ">
+              Or find by town
+            </h2>
+            <img
+              src={line}
+              className="w-[40.5px] h-[1px] md:w-[311px] md:h-[1px] border custom-button-border"
+            />
+          </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mt-2">
             {links.map((link, index) => {

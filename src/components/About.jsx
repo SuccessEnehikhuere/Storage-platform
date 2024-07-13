@@ -4,13 +4,19 @@ import mobileAbout from '../assets/images/provisions/About2.png'
 
 const About = () => {
   return (
-    <div className='py-40 md:py-20 md:px-12 mx-auto flex items-center'>
-      <div className="hidden md:flex items-center justify-center w-[1146px]  h-[569px]">
-        <img src={about} alt="about image" />
+    <div className="flex items-center py-8 md:py-20 px-4 md:px-16">
+      {/* Desktop view */}
+      <div className="hidden md:flex items-center justify-center w-full">
+        <img src={about} alt="about image" className="max-w-full h-auto" />
       </div>
 
-      <div className="flex md:hidden items-center justify-center w-full h-[200px] ">
-        <img src={mobileAbout} alt="about image" />
+      {/* Mobile view */}
+      <div className="flex md:hidden items-center justify-center w-full">
+        <img
+          src={mobileAbout}
+          alt="mobile about image"
+          className="max-w-full h-auto"
+        />
       </div>
     </div>
   )

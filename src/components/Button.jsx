@@ -5,7 +5,7 @@ const Button = ({ text, width, height, bg, color, gap }) => {
   return (
     <div>
       <button
-        className={`flex items-center rounded-md py-2 px-3 border custom-button-border font-helvetica font-[700] text-${color} bg-${bg} w-[${width}] h-[${height}]`}
+        className={`flex items-center rounded-md cursor-pointer py-2 px-3 border custom-button-border font-helvetica font-[700] text-${color} bg-${bg} w-[${width}] h-[${height}]`}
         style={{ gap: gap }}
       >
         {text}
