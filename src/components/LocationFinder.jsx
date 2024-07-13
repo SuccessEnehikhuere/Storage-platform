@@ -57,8 +57,6 @@ const LocationFinder = () => {
                 
                 <Link
                   to={link.route}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   key={index}
                   className="rounded-md px-4 py-3 border custom-button-border font-helvetica font-[700] bg-white  flex items-center gap-3 justify-center text-main leading-[24px]"
                 >
