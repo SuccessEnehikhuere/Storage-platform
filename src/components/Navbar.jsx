@@ -4,7 +4,7 @@ import { NavbarLinks } from '../utils'
 import Button from './Button'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { FaTimes } from 'react-icons/fa'
-
+import {Link} from 'react-router-dom'
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -21,7 +21,9 @@ const Navbar = () => {
     <nav className="bg-custom-gradient px-8 w-full mx-auto">
       <div className="flex items-center justify-between py-8">
         <div>
-          <img src={logo} alt="logo" />
+          <Link to="/">
+            <img src={logo} alt="logo" />
+          </Link>
         </div>
 
         {/* Medium to large screens */}
@@ -56,7 +58,7 @@ const Navbar = () => {
       {menuOpen && (
         <div className="lg:hidden fixed left-0 right-0 top-0 flex flex-col bg-custom-gradient px-4 pt-2 z-20 overflow-y-auto">
           <div className="flex justify-between items-center ">
-             <img src={logo} alt="logo" />
+            <img src={logo} alt="logo" />
             <FaTimes
               className="w-6 h-6 cursor-pointer text-white"
               onClick={closeMenu}
@@ -65,7 +67,7 @@ const Navbar = () => {
           <nav className="flex flex-col">
             {NavbarLinks.map((link, index) => (
               <a
-                href='' 
+                href=""
                 className="font-inter font-bold text-white leading-5 rounded-md py-2 px-4 hover:border custom-hover-border"
                 key={index}
               >

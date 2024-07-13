@@ -1,6 +1,8 @@
 import { IoSearch } from 'react-icons/io5'
 import { links } from '../utils'
 import line from '../assets/images/hero/line.svg'
+import { Link } from 'react-router-dom'
+
 
 const LocationFinder = () => {
   return (
@@ -52,8 +54,9 @@ const LocationFinder = () => {
             {links.map((link, index) => {
               const IconComponent = link.img
               return (
-                <a
-                  href={link.route}
+                
+                <Link
+                  to={link.route}
                   target="_blank"
                   rel="noopener noreferrer"
                   key={index}
@@ -61,7 +64,7 @@ const LocationFinder = () => {
                 >
                   <span>{link.text}</span>
                   <IconComponent />
-                </a>
+                </Link>
               )
             })}
             {/* <button className="flex items-center rounded-md py-2 px-3 border custom-button-border font-helvetica font-[700] text-$">
