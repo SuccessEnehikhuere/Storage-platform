@@ -8,7 +8,7 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: '/Killingworth',
+    path: '/killingworth',
     element: <Killingworth/>
   },
 ])
