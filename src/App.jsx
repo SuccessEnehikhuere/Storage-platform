@@ -8,8 +8,8 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: '/killingworth',
-    element: <Killingworth/>
+    path: '/location',
+    element: <Killingworth />,
   },
 ])
 

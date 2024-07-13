@@ -83,7 +83,7 @@ export const links = [
   {
     text: 'Morecambe',
     img: FaArrowRightLong,
-    route: '/killingworth',
+    route: '',
   },
   {
     text: 'Durham',
@@ -98,7 +98,7 @@ export const links = [
   {
     text: 'Killingworth',
     img: FaArrowRightLong,
-    route: '/Killingworth',
+    route: '/location',
   },
   {
     text: 'Brunswick',
