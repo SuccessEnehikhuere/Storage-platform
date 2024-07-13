@@ -4,9 +4,6 @@ module.exports = {
     extend: {
       backgroundImage: {
         'custom-gradient': 'linear-gradient(to right, #4680B9, #386694)',
-        'button-gradient': 'linear-gradient(to right, #FFE0B2, #FFCC80)',
-        'orange-gradient':
-          'linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 100%, #FFF5E5 100%)',
       },
       colors: {
         main: '#285581',
